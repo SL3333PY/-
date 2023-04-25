@@ -37,9 +37,9 @@ bool searchNum(int a)
     while (i <= last) {
         //cout << i << " 2 \n";
         int left = 0;
-        int right = dbs[i].size() - 1; // array ªø«× -1
+        int right = dbs[i].size() - 1; // array é•·åº¦ -1
         while (left <= right) {
-            int mid = (left + right) / 2; // ¥Î int ªº©Ê½è°µµL±ø¥ó±Ë¥h
+            int mid = (left + right) / 2; // ç”¨ int çš„æ€§è³ªåšç„¡æ¢ä»¶æ¨åŽ»
             if (dbs[i].at(mid) > a) {
                 right = mid - 1;
             }
@@ -49,7 +49,7 @@ bool searchNum(int a)
             else {
                 found.first = i;
                 found.second = mid;
-                return 1; // ­è¦n§ä¨ì a
+                return 1; // å‰›å¥½æ‰¾åˆ° a
             }
         }
         //cout << i << " 1 \n";
@@ -67,7 +67,7 @@ void deleteNum(int a)
     del[i]++;
     if (del[i] >= pow(2, i) / 2) {
         del[i] = 0;
-        vector<int> temp(pow(2, i-1)); //¼È¦s¥h±¼noneªº¼Æ
+        vector<int> temp(pow(2, i-1)); //æš«å­˜åŽ»æŽ‰noneçš„æ•¸
         vector<int>::iterator it = copy_if(
             begin(dbs[i]), end(dbs[i]), begin(temp), [none](const int t) { return t != none; });
         temp.erase(it, temp.end());
@@ -115,30 +115,30 @@ int main()
     while (m--) {
         cin >> c >> num;
         if (c == 'i') {
-            start = clock(); //¶}©l®É¶¡
+            start = clock(); //é–‹å§‹æ™‚é–“
             if (searchNum(num)) cout << "Insert Failed\n";
             else {
                 insertNum(num);
                 cout << "Insert Success\n";
             }
-            stop = clock(); //µ²§ô®É¶¡
+            stop = clock(); //çµæŸæ™‚é–“
             cout << double(stop - start) / CLOCKS_PER_SEC << " s" << endl;
         }
         else if (c == 's') {
-            start = clock(); //¶}©l®É¶¡
+            start = clock(); //é–‹å§‹æ™‚é–“
             if (searchNum(num)) cout << "Found\n";
             else cout << "Not Found\n";
-            stop = clock(); //µ²§ô®É¶¡
+            stop = clock(); //çµæŸæ™‚é–“
             cout << double(stop - start) / CLOCKS_PER_SEC << " s" << endl;
         }
         else if (c == 'd') {
-            start = clock(); //¶}©l®É¶¡
+            start = clock(); //é–‹å§‹æ™‚é–“
             if (searchNum(num)) {
                 deleteNum(num);
                 cout << "Delete Success\n";
             }
             else cout << "Delete Failed\n";
-            stop = clock(); //µ²§ô®É¶¡
+            stop = clock(); //çµæŸæ™‚é–“
             cout << double(stop - start) / CLOCKS_PER_SEC << " s" << endl;
         }
     }
