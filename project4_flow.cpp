@@ -47,7 +47,7 @@ int main()
             cin >> x[i] >> y[i] >> w;
             cost[x[i]][y[i]] = cost[y[i]][x[i]] = w;
         }
-        start = clock(); //¶}©l®É¶¡
+        start = clock(); //é–‹å§‹æ™‚é–“
         max_flow(1, 2);
 
         for (int i = 0; i < m; i++) {
@@ -55,8 +55,8 @@ int main()
                     cout << x[i] << " " << y[i] << "\n";
         }
         cout << "\n";
-        stop = clock(); //µ²§ô®É¶¡
-        cout << "\n¹Bºâ®É¶¡¡G " << double(stop - start) / CLOCKS_PER_SEC << " s" << endl;
+        stop = clock(); //çµæŸæ™‚é–“
+        cout << "\né‹ç®—æ™‚é–“ï¼š " << double(stop - start) / CLOCKS_PER_SEC << " s" << endl;
     }
 
     return 0;
