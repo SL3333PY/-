@@ -1,4 +1,4 @@
-# 程設專題
+# 程式設計研討專題
 ## Project 1 Maximal Points Problem
 ### 題目內容
 
