@@ -1,11 +1,11 @@
 /*
 Maximal Points Problem (3D)
 
-¦b¤@­ÓªÅ¶¡¤¤¦³ p ©M q ¨â­ÓÂI¡A·í p.x >= q.x¡Bp.y >= q.y ¥H¤Î p.z >= q.z ¦¨¥ß®ÉºÙ¬° p dominates q¡C
-·í¤@­Ó¦bÂI¶°¦X S ¤¤ªº p ÂI¤£³Q¥ô¦ó¨ä¥LÄİ©ó S ªºÂI dominates ®É¡A
-¸Ó p ÂI´N³QºÙ§@¬°¤@­Ó maximal point¡C
+åœ¨ä¸€å€‹ç©ºé–“ä¸­æœ‰ p å’Œ q å…©å€‹é»ï¼Œç•¶ p.x >= q.xã€p.y >= q.y ä»¥åŠ p.z >= q.z æˆç«‹æ™‚ç¨±ç‚º p dominates qã€‚
+ç•¶ä¸€å€‹åœ¨é»é›†åˆ S ä¸­çš„ p é»ä¸è¢«ä»»ä½•å…¶ä»–å±¬æ–¼ S çš„é» dominates æ™‚ï¼Œ
+è©² p é»å°±è¢«ç¨±ä½œç‚ºä¸€å€‹ maximal pointã€‚
 
-¥Ø¼Ğ¡G±N©Ò¦³Äİ©ó S ªº maximal points §ä¥X¨Ó¡C
+ç›®æ¨™ï¼šå°‡æ‰€æœ‰å±¬æ–¼ S çš„ maximal points æ‰¾å‡ºä¾†ã€‚
 
 */
 
@@ -26,7 +26,7 @@ typedef struct
 vector<point> all;
 
 
-bool cmp(point a, point b) //­°§Ç
+bool cmp(point a, point b) //é™åº
 {
     if (a.x > b.x) return true;
     else if (a.x == b.x && a.y > b.y) return true;
@@ -140,7 +140,7 @@ int main()
     //cout << ma.x << " " << ma.y << " " << ma.z << "\n";
 
     END = clock();
-    cout << endl << "¶i¦æ¹Bºâ©Òªá¶Oªº®É¶¡¡G" << (END - START) / CLOCKS_PER_SEC << " S" << endl;
+    cout << endl << "é€²è¡Œé‹ç®—æ‰€èŠ±è²»çš„æ™‚é–“ï¼š" << (END - START) / CLOCKS_PER_SEC << " S" << endl;
 
     return 0;
 
