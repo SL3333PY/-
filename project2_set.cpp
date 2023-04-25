@@ -21,30 +21,30 @@ int main()
     while (m--) {
         cin >> c >> num;
         if (c == 'i') {
-            start = clock(); //¶}©l®É¶¡
+            start = clock(); //é–‹å§‹æ™‚é–“
             if (dbs.count(num)) cout << "Insert Failed\n";
             else {
                 dbs.insert(num);
                 cout << "Insert Success\n";
             }
-            stop = clock(); //µ²§ô®É¶¡
+            stop = clock(); //çµæŸæ™‚é–“
             cout << double(stop - start) / CLOCKS_PER_SEC << " s" << endl;
         }
         else if (c == 's') {
-            start = clock(); //¶}©l®É¶¡
+            start = clock(); //é–‹å§‹æ™‚é–“
             if (dbs.count(num)) cout << "Found\n";
             else cout << "Not Found\n";
-            stop = clock(); //µ²§ô®É¶¡
+            stop = clock(); //çµæŸæ™‚é–“
             cout << double(stop - start) / CLOCKS_PER_SEC << " s" << endl;
         }
         else if (c == 'd') {
-            start = clock(); //¶}©l®É¶¡
+            start = clock(); //é–‹å§‹æ™‚é–“
             if (dbs.count(num)) {
                 dbs.erase(num);
                 cout << "Delete Success\n";
             }
             else cout << "Delete Failed\n";
-            stop = clock(); //µ²§ô®É¶¡
+            stop = clock(); //çµæŸæ™‚é–“
             cout << double(stop - start) / CLOCKS_PER_SEC << " s" << endl;
         }
     }
