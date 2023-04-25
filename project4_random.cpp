@@ -37,11 +37,11 @@ int main()
             if (tmp.node1 > tmp.node2) swap(tmp.node1, tmp.node2);
             all.push_back(tmp);
         }
-        start = clock(); //¶}©l®É¶¡
+        start = clock(); //é–‹å§‹æ™‚é–“
         srand (unsigned (time(0)));
 
 
-        // ­n­«½Æªº³¡¤À
+        // è¦é‡è¤‡çš„éƒ¨åˆ†
         while (try_time--) {
             random_shuffle(all.begin(), all.end());
             tryminc = 0;
@@ -80,8 +80,8 @@ int main()
             printf("%d %d\n", mincut[i].node1, mincut[i].node2);
         cout << "\n";
         //cout << minc << endl;
-        stop = clock(); //µ²§ô®É¶¡
-        cout << "\n¹Bºâ®É¶¡¡G " << double(stop - start) / CLOCKS_PER_SEC << " s" << endl;
+        stop = clock(); //çµæŸæ™‚é–“
+        cout << "\né‹ç®—æ™‚é–“ï¼š " << double(stop - start) / CLOCKS_PER_SEC << " s" << endl;
     }
 
     return 0;
