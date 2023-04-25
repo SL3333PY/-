@@ -8,7 +8,7 @@ typedef struct
     double z;
 }point;
 
-bool cmp(point a, point b) //­°§Ç±Æ¦C
+bool cmp(point a, point b) //é™åºæ’åˆ—
 {
     if (a.x > b.x) return true;
     else if (a.x == b.x && a.y > b.y) return true;
@@ -29,7 +29,7 @@ int main()
         cin >> all[i].x >> all[i].y >> all[i].z;
     }
 
-    //­pºâ®É¶¡
+    //è¨ˆç®—æ™‚é–“
     double START,END;
 	START = clock();
 
@@ -38,7 +38,7 @@ int main()
         for (int j = 0; j < n; j++) {
             if (all[j].x >= all[i].x && all[j].y >= all[i].y && all[j].z >= all[i].z && j != i) {
                 maxi = 0;
-                //break; //¦pªG¤£¬O maximal ´N¤£¥ÎÄ~Äò¤ñ¤F
+                //break; //å¦‚æœä¸æ˜¯ maximal å°±ä¸ç”¨ç¹¼çºŒæ¯”äº†
             }
         }
         if (maxi) maximal.push_back(all[i]);
@@ -59,7 +59,7 @@ int main()
     }
 
     END = clock();
-    cout << endl << "¶i¦æ¹Bºâ©Òªá¶Oªº®É¶¡¡G" << (END - START) / CLOCKS_PER_SEC << " S" << endl;
+    cout << endl << "é€²è¡Œé‹ç®—æ‰€èŠ±è²»çš„æ™‚é–“ï¼š" << (END - START) / CLOCKS_PER_SEC << " S" << endl;
 
     return 0;
 }
