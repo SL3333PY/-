@@ -63,7 +63,7 @@ int main()
             pre[i] = sum;
             dp[i + 1] = ((dp[i] << candy[i]) | dp[i]);
         }
-        start = clock(); //¶}©l®É¶¡
+        start = clock(); //é–‹å§‹æ™‚é–“
         for (int i = 0; i <= sum; i++)
             if(dp[n][i]) v.push_back(i);
 
@@ -84,8 +84,8 @@ int main()
 		}
 
         cout << "Case " << cas << ": " << min_diff << "\n";
-        stop = clock(); //µ²§ô®É¶¡
-        //cout << "\n¹Bºâ®É¶¡¡G " << double(stop - start) / CLOCKS_PER_SEC << " s" << endl;
+        stop = clock(); //çµæŸæ™‚é–“
+        //cout << "\né‹ç®—æ™‚é–“ï¼š " << double(stop - start) / CLOCKS_PER_SEC << " s" << endl;
     }
 
     return 0;
