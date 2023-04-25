@@ -50,13 +50,13 @@ int main()
             cin >> candy[i];
             sum += candy[i];
         }
-        start = clock(); //¶}©l®É¶¡
+        start = clock(); //é–‹å§‹æ™‚é–“
         for(int i = 0; i <= sum; i++) {
             dp[i].reset();
         }
         cout << "Case " << cas << ": " << solve() << "\n";
-        stop = clock(); //µ²§ô®É¶¡
-        //cout << "\n¹Bºâ®É¶¡¡G " << double(stop - start) / CLOCKS_PER_SEC << " s" << endl;
+        stop = clock(); //çµæŸæ™‚é–“
+        //cout << "\né‹ç®—æ™‚é–“ï¼š " << double(stop - start) / CLOCKS_PER_SEC << " s" << endl;
     }
 
     return 0;
